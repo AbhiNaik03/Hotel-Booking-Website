@@ -1,18 +1,50 @@
+/* body styling */
 body {
     height: 100%;
     width: 100%;
+    margin: 0;
+    background-color: #e0e0e0;
 }
 #main {
     height: 100%;
     width: 100%;
 }
+
+/* header styling */
+header {
+    background-color: rosybrown;
+}
 #logo {
     height: 60px;
     width: 60px;
 }
+
+/* content styling */
+#hotel-info {
+    background-color: rgb(132,136,139);
+    width: 50%;
+    height: 20%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
 #radison {
     height: 500px;
     width: 500px;
+}
+#customer-info {
+    margin: 2%;
+}
+#tariff {
+    margin: 2%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1% 2%;
+}
+
+/* footer styling */
+footer {
+    background-color: rosybrown;
 }
 .social-media-image {
     height: 20px;
