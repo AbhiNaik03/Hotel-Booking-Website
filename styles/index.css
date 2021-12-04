@@ -4,6 +4,7 @@ body {
     width: 100%;
     margin: 0;
     background-color: #e0e0e0;
+    font-family: 'Ubuntu', sans-serif;
 }
 #main {
     height: 100%;
@@ -12,14 +13,34 @@ body {
 
 /* header styling */
 header {
+    position: fixed;
     background-color: rosybrown;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
 }
 #logo {
     height: 60px;
     width: 60px;
 }
+#login {
+    float: right;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+    margin-right: 20px;
+}
 
 /* content styling */
+#content {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    bottom: 100px;
+    overflow: auto;
+}
 #search-bar {
     background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
     height: 380px;
@@ -27,9 +48,26 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 }
+#search-text {
+    float: left;
+    margin-top: 180px;
+    margin-left: 39%;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    padding: 10px;
+}
 #city-card {
+    display: flex;
     margin-left: 15%;
     margin-right: 15%;
+}
+#city-link {
+    text-decoration: none;
+    border: 0;
+    outline: none;
+    padding: 4%;
 }
 .city-image {
     height: 150px;
@@ -37,13 +75,48 @@ header {
     padding: 4%;
     border-radius: 25%;
 }
-
+#city-image-link {
+    padding: 0%;
+}
+#view-link {
+    float: left;
+    text-decoration: none;
+    color: black;
+    margin-left: 45%;
+}
 
 /* footer styling */
 footer {
+    position: fixed;
     background-color: rosybrown;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    top: auto;
+    z-index: 1;
+}
+#contact {
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+}
+#social {
+    float: right;
+    margin-right: 1%;
+    margin-top: 20px;
+}
+.social-link {
+    text-decoration: none;
 }
 .social-media-image {
     height: 20px;
     width: 22px;
+}
+#copyright {
+    float: left;
+    margin-top: 40px;
+    margin-left: 34%;
+    font-size: small;
 }

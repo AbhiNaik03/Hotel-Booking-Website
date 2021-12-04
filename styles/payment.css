@@ -4,6 +4,7 @@ body {
     width: 100%;
     margin: 0;
     background-color: #e0e0e0;
+    font-family: 'Ubuntu', sans-serif;
 }
 #main {
     height: 100%;
@@ -18,35 +19,89 @@ header {
     height: 60px;
     width: 60px;
 }
+#login {
+    float: right;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+    margin-right: 20px;
+}
 
 /* content styling */
+#content {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 65px;
+    bottom: 70px;
+    overflow: auto;
+}
 #hotel-info {
     background-color: rgb(132,136,139);
-    width: 50%;
-    height: 20%;
-    margin: auto;
+    width: 630px;
+    height: 630px;
     margin-top: 2%;
-    margin-bottom: 4%;
+    margin-left: 30%;
 }
 #radison {
     height: 500px;
     width: 500px;
 }
 #customer-info {
-    margin: 2%;
+    float: left;
+    margin-top: 2%;
+    margin-left: 2%;
 }
 #tariff {
-    margin: 2%;
+    font: left;
+    margin-top: 15%;
+    margin-left: 2%;
+    margin-right: 2%;
     border: 1px solid black;
     border-radius: 5px;
     padding: 1% 2%;
 }
+#pay {
+    float: left;
+    text-decoration: none;
+    color: black;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
 
 /* footer styling */
 footer {
+    position: fixed;
     background-color: rosybrown;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    top: auto;
+    z-index: 1;
+}
+#contact {
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+}
+#social {
+    float: right;
+    margin-right: 1%;
+    margin-top: 20px;
+}
+.social-link {
+    text-decoration: none;
 }
 .social-media-image {
     height: 20px;
     width: 22px;
+}
+#copyright {
+    float: left;
+    margin-top: 40px;
+    margin-left: 34%;
+    font-size: small;
 }

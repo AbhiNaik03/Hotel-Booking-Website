@@ -3,44 +3,49 @@
     <head>
         <title>Index</title>
         <link href="styles\index.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="main">
 
             <header>
                 <img src="assests\images\logo.png" alt="logo" id="logo">
-                <a href="login.html">Login</a>
+                <a href="login.html" id="login">Login</a>
             </header>
 
             <div id="content">
                 <div id="search-bar">
-                    <input type="text" autocomplete="off" placeholder="City">
+                    <input type="text" autocomplete="off" placeholder="City" id="search-text" size="30">
                 </div>
 
+                <div id="view">
                 <div id="city-card">
-                    <a href="list.html">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="delhi" class="city-image">
+                    <a href="list.html" id="city-link">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="delhi" class="city-image" id="city-image-link">
                     </a>
                     <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="goa" class="city-image">
                     <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="hyderbad" class="city-image">
                     <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt="kolkata" class="city-image"> <br>
                     
                 </div>
-                <a href="index.html">View more >></a>
+                    <a href="index.html" id="view-link">View more >></a>
+                </div>
             </div>
 
             <footer>
-                <a href="contact.html">Contact Us</a> <br>
-                <a href="https://www.facebook.com" target="_blank">
-                    <img src="assests/images/facebook.png" alt="facebook" class="social-media-image">
-                </a>
-                <a href="https://www.instagram.com" target="_blank">
-                    <img src="assests/images/instagram.png" alt="instagram" class="social-media-image">
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                    <img src="assests/images/twitter.png" alt="twitter" class="social-media-image">
-                </a> <br>
-                <p>&#9400; 2021 ROOM SEARCH PVT LTD</p>
+                <a href="contact.html" id="contact">Contact Us</a>
+                <div id="social">
+                    <a href="https://www.facebook.com" target="_blank" class="social-link">
+                        <img src="assests/images/facebook.png" alt="facebook" class="social-media-image">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-link">
+                        <img src="assests/images/instagram.png" alt="instagram" class="social-media-image">
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-link">
+                        <img src="assests/images/twitter.png" alt="twitter" class="social-media-image">
+                    </a>
+                </div>
+                <p id="copyright">&#9400; 2021 ROOM SEARCH PVT. LTD.</p>
             </footer>
 
         </div>
