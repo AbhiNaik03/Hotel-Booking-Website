@@ -13,6 +13,8 @@ body {
 
 /* header styling */
 header {
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     background-color: rosybrown;
     width: 100%;
@@ -20,68 +22,91 @@ header {
     top: 0;
     z-index: 1;
 }
-#logo {
+
+/* logo styling */
+#logo-div {
+    margin-left: 1%;
+}
+#logo-img {
     height: 60px;
     width: 60px;
 }
-#login {
-    float: right;
+
+/* login styling */
+#login-div {
+    margin-top: 1.5%;
+    margin-right: 2%;
+}
+#login-link {
     text-decoration: none;
     color: black;
-    margin-top: 20px;
-    margin-right: 20px;
 }
+
 
 /* content styling */
 #content {
-    display: block;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    top: 80px;
-    bottom: 100px;
-    overflow: auto;
+    margin-top: 60px;
+    margin-bottom: 80px;
 }
-#list-map {
-    float: left;
-    margin-left: 42%;
+
+/* view div styling */
+#view-div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2%;
+    margin-left: 35%;
+    margin-right: 35%;
 }
 .view-link {
-    padding: 20px;
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
-#hotel-set1 {
+
+
+/* list view styling */
+#list-view {
     display: flex;
-    align-items: flex-end;
-    margin: 0 auto;
     margin-top: 50px;
+    flex-wrap: wrap;
 }
-#hotel-set2 {
-    display: flex;
-    align-items: flex-end;
-    margin: 0 auto;
-}
-#detail-link {
+#radison-hotel-link {
     text-decoration: none;
     color: black;
 }
-.hotels {
+.hotel-div {
     margin: 2%;
-    background-color: rgb(132,136,139);
+    background-color: lightgrey;
     width: 40%;
     margin-left: 75px;
+}
+.hotel-info-div {
+    display: flex;
 }
 .hotel-images {
     height: 200px;
     width: 250px;
 }
+.hotel-info {
+    margin-left: 5%;
+}
+
+/* map view styling */
 #map-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     display: none;
 }
 
 /* footer styling */
 footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     background-color: rosybrown;
     width: 100%;
@@ -90,17 +115,24 @@ footer {
     top: auto;
     z-index: 1;
 }
-#contact {
-    float: left;
-    margin-top: 20px;
-    margin-left: 20px;
+
+/* contact styling */
+#contact-div {
+    margin-left: 2%;
+}
+#contact-link {
     text-decoration: none;
     color: black;
 }
-#social {
-    float: right;
-    margin-right: 1%;
-    margin-top: 20px;
+
+/* copyright styling */
+#copyright-para {
+    font-size: small;
+}
+
+/* social links styling */
+#social-div {
+    margin-right: 2%;
 }
 .social-link {
     text-decoration: none;
@@ -108,10 +140,4 @@ footer {
 .social-media-image {
     height: 20px;
     width: 22px;
-}
-#copyright {
-    float: left;
-    margin-top: 40px;
-    margin-left: 34%;
-    font-size: small;
 }

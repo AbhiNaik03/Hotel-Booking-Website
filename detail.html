@@ -9,43 +9,87 @@
         <div id="main">
 
             <header>
-                <a href="index.html">
-                    <img src="assests\images\logo.png" alt="logo" id="logo">
-                </a>
-                <a href="login.html" id="login">Login</a>
+                <div id="logo-div">
+                    <a href="index.html">
+                        <img src="assests\images\logo.png" alt="logo" id="logo-img">
+                    </a>
+                </div>
+                
+                <div id="login-div">
+                    <a href="login.html" id="login-link">Login</a>
+                </div>
             </header>
 
             <div id="content">
-                <div id="hotel-image">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="radison_blue" id="radison">
+                <div id="hotel-div">
+                    <div id="hotel-image-div">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="radison_blue" id="img-radison">
+                    </div>
+                    
+                    
+                    <div id="payment-div">
+                        <form action="payment.html" autocomplete="off" id="hotel-form">
+                            
+                            <div class="form-div">
+                                <div class="label-div">
+                                    <label for="adults" class="label">Adults:</label>
+                                </div>
+                                <div class="input-div">
+                                    <input type="number" name="adults" min="1" value="1" class="input">
+                                </div>
+                            </div>
+
+                            <div class="form-div">
+                                <div class="label-div">
+                                    <label for="name" class="label">Name:</label>
+                                </div>
+                                <div class="input-div">
+                                    <input type="text" name="name" required class="input">
+                                </div>
+                            </div>
+
+                            <div class="form-div">
+                                <div class="label-div">
+                                    <label for="fromDate" class="label">From Date:</label>
+                                </div>
+                                <div class="input-div">
+                                    <input type="date" name="fromDate" required class="input">
+                                </div>
+                            </div>
+
+                            <div class="form-div">
+                                <div class="label-div">
+                                    <label for="toDate" class="label">To Date:</label>
+                                </div>
+                                <div class="input-div">
+                                    <input type="date" name="toDate" required class="input">
+                                </div>
+                            </div>
+
+                            <div class="form-div">
+                                <div class="label-div">
+                                    <label for="total" class="label">Total:</label>
+                                </div>
+                                <div class="input-div">
+                                    <input type="text" name="total" readonly class="input">
+                                </div>
+                            </div>
+                            
+                            <div class="form-div submit">
+                                <div class="input-div">
+                                    <input type="submit" value="Book Now" id="submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                
-                
-                <form action="payment.html" autocomplete="off" id="hotel-form">
-                    <label for="adults">Adults:</label>
-                    <input type="number" name="adults" min="1" value="1"> <br>
 
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" required> <br>
-
-                    <label for="fromDate">From Date:</label>
-                    <input type="date" name="fromDate" required> <br>
-
-                    <label for="toDate">To Date:</label>
-                    <input type="date" name="toDate" required> <br>
-
-                    <label for="total">Total:</label>
-                    <input type="text" name="total" readonly> <br>
-
-                    <input type="submit" value="Book Now">
-                </form>
-
-                <div id="hotel-description">
-                    <strong>Radison Blu Hotel</strong>
-                    <p>RATING</p>
+                <div id="hotel-description-div">
+                    <h2>Radison Blu Hotel</h2>
+                    <h4>RATING</h4>
                     <p>5 Star</p>
 
-                    <strong>AMENITIES</strong>
+                    <h4>AMENITIES</h4>
                     <ul>
                         <li>Room Service</li>
                         <li>Restaurant</li>
@@ -54,7 +98,7 @@
                         <li>Pool</li>
                     </ul>
 
-                    <strong>DESCRIPTION</strong>
+                    <h4>DESCRIPTION</h4>
                     <p>
                         With an ideal location just five minutes from Indira Gandhi International Airport (DEL) and 10 minutes from Cyber City, the Radisson Blu Plaza Delhi Airport provides upscale accommodations and convenient city access. Situated on the Delhi-Gurgaon Expressway, our hotel places guests near New Delhi’s vibrant South and Central sides and close to the bustling commercial hub of Gurugram (formerly Gurgaon). When you’re ready to explore the area, head to the nearest metro station, only 600 meters away, or enjoy complimentary transportation to world-class shopping at nearby Aerocity.
                     </p>
@@ -62,8 +106,15 @@
             </div>
 
             <footer>
-                <a href="contact.html" id="contact">Contact Us</a>
-                <div id="social">
+                <div id="contact-div">
+                    <a href="contact.html" id="contact-link">Contact Us</a>
+                </div>
+
+                <div id="copyright-div">
+                    <p id="copyright-para">&#9400; 2021 ROOM SEARCH PVT. LTD.</p>
+                </div>
+
+                <div id="social-div">
                     <a href="https://www.facebook.com" target="_blank" class="social-link">
                         <img src="assests/images/facebook.png" alt="facebook" class="social-media-image">
                     </a>
@@ -74,7 +125,6 @@
                         <img src="assests/images/twitter.png" alt="twitter" class="social-media-image">
                     </a>
                 </div>
-                <p id="copyright">&#9400; 2021 ROOM SEARCH PVT. LTD.</p>
             </footer>
 
         </div>

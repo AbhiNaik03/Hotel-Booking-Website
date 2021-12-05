@@ -13,6 +13,8 @@ body {
 
 /* header styling */
 header {
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     background-color: rosybrown;
     width: 100%;
@@ -20,44 +22,92 @@ header {
     top: 0;
     z-index: 1;
 }
-#logo {
+
+/* logo styling */
+#logo-div {
+    margin-left: 1%;
+}
+#logo-img {
     height: 60px;
     width: 60px;
 }
-#login {
-    float: right;
+
+/* login styling */
+#login-div {
+    margin-top: 1.5%;
+    margin-right: 2%;
+}
+#login-link {
     text-decoration: none;
     color: black;
-    margin-top: 20px;
-    margin-right: 20px;
 }
 
 
 /* content styling */
 #content {
-    display: block;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    top: 60px;
-    bottom: 70px;
-    overflow: auto;
+    margin-top: 60px;
+    margin-bottom: 80px;
 }
-#hotel-image {
-    margin: 2% 4% 0%;
+
+#hotel-div {
+    display: grid;
+    grid-template-columns: 400px 400px 400px 400px;
+    margin: 5%;
+    border: 1px solid black;
+    height: 420px;
+    grid-gap: 1px;
 }
-#radison {
-    height: 500px;
+#hotel-div > #payment-div {
+    border-left: 1px solid black;
+}
+
+#hotel-image-div {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
+    align-self: center;
+}
+#payment-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.form-div {
+    display: flex;
+    margin: 10%;
+}
+.label-div {
+    width: 40%;
+}
+.input {
+    width: 150px;
+}
+#submit {
+    margin-left: 100%;
+}
+#img-radison {
+    height: 350px;
     width: 500px;
 }
-#hotel-form {
-    margin: 0% 4% 1%;
+
+
+
+#hotel-description-div {
+    margin-left: 2%;
 }
-#hotel-description {
-    margin: 1% 4% 2%;
+#hotel-description-div h2, h4 {
+    font-family: cursive;
 }
 
 /* footer styling */
 footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     background-color: rosybrown;
     width: 100%;
@@ -66,17 +116,24 @@ footer {
     top: auto;
     z-index: 1;
 }
-#contact {
-    float: left;
-    margin-top: 20px;
-    margin-left: 20px;
+
+/* contact styling */
+#contact-div {
+    margin-left: 2%;
+}
+#contact-link {
     text-decoration: none;
     color: black;
 }
-#social {
-    float: right;
-    margin-right: 1%;
-    margin-top: 20px;
+
+/* copyright styling */
+#copyright-para {
+    font-size: small;
+}
+
+/* social links styling */
+#social-div {
+    margin-right: 2%;
 }
 .social-link {
     text-decoration: none;
@@ -84,10 +141,4 @@ footer {
 .social-media-image {
     height: 20px;
     width: 22px;
-}
-#copyright {
-    float: left;
-    margin-top: 40px;
-    margin-left: 34%;
-    font-size: small;
 }

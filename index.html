@@ -9,32 +9,73 @@
         <div id="main">
 
             <header>
-                <img src="assests\images\logo.png" alt="logo" id="logo">
-                <a href="login.html" id="login">Login</a>
+                <div id="logo-div">
+                    <img src="assests\images\logo.png" alt="logo" id="logo-img">
+                </div>
+                
+                <div id="login-div">
+                    <a href="login.html" id="login-link">Login</a>
+                </div>
             </header>
 
             <div id="content">
-                <div id="search-bar">
-                    <input type="text" autocomplete="off" placeholder="City" id="search-text" size="30">
+                <div id="search-bar-div">
+                    <input type="text" autocomplete="off" placeholder="City" id="search-text" size="40">
                 </div>
 
-                <div id="view">
-                <div id="city-card">
-                    <a href="list.html" id="city-link">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="delhi" class="city-image" id="city-image-link">
-                    </a>
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="goa" class="city-image">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="hyderbad" class="city-image">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt="kolkata" class="city-image"> <br>
+                <div id="city-card-div">
+                    <div class="city-card">
+                        <div class="img-div">
+                            <a href="list.html" id="delhi-city-link">
+                                <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="delhi" class="city-image">
+                            </a>
+                        </div>
+                        <div class="img-text-div">
+                            Delhi
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="img-div">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="goa" class="city-image">
+                        </div>
+                        <div class="img-text-div">
+                            Goa
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="img-div">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="hyderbad" class="city-image">
+                        </div>
+                        <div class="img-text-div">
+                            Hyderbad
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="img-div">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt="kolkata" class="city-image">
+                        </div>
+                        <div class="img-text-div">
+                            Kolkata
+                        </div>
+                    </div>
                     
                 </div>
+
+                <div id="view-div">
                     <a href="index.html" id="view-link">View more >></a>
                 </div>
             </div>
 
             <footer>
-                <a href="contact.html" id="contact">Contact Us</a>
-                <div id="social">
+                <div id="contact-div">
+                    <a href="contact.html" id="contact-link">Contact Us</a>
+                </div>
+
+                <div id="copyright-div">
+                    <p id="copyright-para">&#9400; 2021 ROOM SEARCH PVT. LTD.</p>
+                </div>
+
+                <div id="social-div">
                     <a href="https://www.facebook.com" target="_blank" class="social-link">
                         <img src="assests/images/facebook.png" alt="facebook" class="social-media-image">
                     </a>
@@ -45,7 +86,6 @@
                         <img src="assests/images/twitter.png" alt="twitter" class="social-media-image">
                     </a>
                 </div>
-                <p id="copyright">&#9400; 2021 ROOM SEARCH PVT. LTD.</p>
             </footer>
 
         </div>

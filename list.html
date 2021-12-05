@@ -9,60 +9,96 @@
         <div id="main">
 
             <header>
-                <a href="index.html">
-                    <img src="assests\images\logo.png" alt="logo" id="logo">
-                </a>
-                <a href="login.html" id="login">Login</a>
+                <div id="logo-div">
+                    <a href="index.html">
+                        <img src="assests\images\logo.png" alt="logo" id="logo-img">
+                    </a>
+                </div>
+                
+                <div id="login-div">
+                    <a href="login.html" id="login-link">Login</a>
+                </div>
             </header>
 
             <div id="content">
-                <div id="list-map">
+
+                <div id="view-div">
+                    <div class="view-link-div">
                         <a href="list.html#list-view" class="view-link">List View</a>
+                    </div>
+                    <div class="view-link-div">
                         <a href="list.html#map-view" class="view-link">Map View</a>
+                    </div>
                 </div>
 
                 <div id="list-view">
-                    <div id="hotel-set1">
-                        <div class="hotels">
-                            <a href="detail.html" id="detail-link">
-                                <div class="hotel-radison">
-                                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="radison_blue" class="hotel-images"> <br>
+                    <div class="hotel-div">
+                        <a href="detail.html" id="radison-hotel-link">
+                            <div class="hotel-info-div">
+                                <div class="hotel-img">
+                                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="radison_blue" class="hotel-images">
+                                </div>
+                                
+                                <div class="hotel-info">
                                     <h3>Radison Blue</h3>
                                     <p>5.0 Star</p>
                                     <p>New Delhi</p>
                                 </div>
-                            </a>
-                        </div>
-    
-                        <div class="hotels">
-                            <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt="lalit" class="hotel-images"> <br>
-                            <h3>The Lalit New Delhi</h3>
-                            <p>4.5 Star</p>
-                            <p>New Delhi</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="hotel-div">
+                        <div class="hotel-info-div">
+                            <div class="hotel-img">
+                                <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt="lalit" class="hotel-images">
+                            </div>
+                            
+                            <div class="hotel-info">
+                                <h3>The Lalit New Delhi</h3>
+                                <p>4.5 Star</p>
+                                <p>New Delhi</p>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div id="hotel-set2">
-                        <div class="hotels">
-                            <img src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt="taj" class="hotel-images"> <br>
-                            <h3>Taj Palace</h3>
-                            <p>4.0 Star</p>
-                            <p>New Delhi</p>
+
+                    <div class="hotel-div">
+                        <div class="hotel-info-div">
+                            <div class="hotel-img">
+                                <img src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt="taj" class="hotel-images">
+                            </div>
+                            
+                            <div class="hotel-info">
+                                <h3>Taj Palace</h3>
+                                <p>4.0 Star</p>
+                                <p>New Delhi</p>
+                            </div>
                         </div>
                     </div>
                     
                 </div>
 
                 <div id="map-view">
-                    <img src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt="map"> <br>
-                    <p>MAP VIEW</p> <br> <br>
+                    <div>
+                        <img src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt="map">
+                    </div>
+                    <div>
+                        <p>MAP VIEW</p>
+                    </div>
                 </div>
 
             </div>
 
             <footer>
-                <a href="contact.html" id="contact">Contact Us</a>
-                <div id="social">
+                <div id="contact-div">
+                    <a href="contact.html" id="contact-link">Contact Us</a>
+                </div>
+
+                <div id="copyright-div">
+                    <p id="copyright-para">&#9400; 2021 ROOM SEARCH PVT. LTD.</p>
+                </div>
+
+                <div id="social-div">
                     <a href="https://www.facebook.com" target="_blank" class="social-link">
                         <img src="assests/images/facebook.png" alt="facebook" class="social-media-image">
                     </a>
@@ -73,7 +109,6 @@
                         <img src="assests/images/twitter.png" alt="twitter" class="social-media-image">
                     </a>
                 </div>
-                <p id="copyright">&#9400; 2021 ROOM SEARCH PVT. LTD.</p>
             </footer>
 
         </div>
