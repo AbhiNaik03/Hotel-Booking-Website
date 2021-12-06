@@ -37,10 +37,15 @@ header {
     margin-top: 1.5%;
     margin-right: 2%;
 }
-#login-link {
-    text-decoration: none;
-    color: black;
+#loginModal .modal-body {
+    display: flex;
+    justify-content: center;
 }
+#loginModal .modal-footer {
+    display: flex;
+    justify-content: center;
+}
+
 
 /* content styling */
 #content {
@@ -48,7 +53,7 @@ header {
     flex-direction: column;
     width: 100%;
     margin-top: 60px;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
 }
 #hotel-info {
     display: flex;
@@ -80,9 +85,9 @@ header {
 #customer-info {
     margin-top: 2%;
 }
-#pay {
-    text-decoration: none;
-    color: black;
+#pay-button {
+    color: white;
+    background-color: green;
 }
 
 /* footer styling */
@@ -101,11 +106,8 @@ footer {
 
 /* contact styling */
 #contact-div {
+    margin: 1%;
     margin-left: 2%;
-}
-#contact-link {
-    text-decoration: none;
-    color: black;
 }
 
 /* copyright styling */
@@ -123,4 +125,10 @@ footer {
 .social-media-image {
     height: 20px;
     width: 22px;
+}
+#contact-form {
+    display: flex;
+}
+#contactInputEmail {
+    width: 300px;
 }

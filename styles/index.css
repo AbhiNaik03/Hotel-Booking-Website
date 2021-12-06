@@ -37,9 +37,13 @@ header {
     margin-top: 1.5%;
     margin-right: 2%;
 }
-#login-link {
-    text-decoration: none;
-    color: black;
+#loginModal .modal-body {
+    display: flex;
+    justify-content: center;
+}
+#loginModal .modal-footer {
+    display: flex;
+    justify-content: center;
 }
 
 /* content styling */
@@ -134,11 +138,8 @@ footer {
 
 /* contact styling */
 #contact-div {
+    margin: 1%;
     margin-left: 2%;
-}
-#contact-link {
-    text-decoration: none;
-    color: black;
 }
 
 /* copyright styling */
@@ -157,4 +158,9 @@ footer {
     height: 20px;
     width: 22px;
 }
-
+#contact-form {
+    display: flex;
+}
+#contactInputEmail {
+    width: 300px;
+}
