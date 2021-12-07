@@ -74,6 +74,36 @@ header {
     justify-self: center;
     align-self: center;
 }
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    background-image: none;
+}
+
+.carousel-control-prev-icon {
+    position: absolute;
+    right: 100px;
+}
+
+.carousel-control-next-icon {
+    position: absolute;
+    left: 100px;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: rosybrown;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: rosybrown;
+}
+
 #payment-div {
     display: flex;
     flex-direction: column;
@@ -99,10 +129,17 @@ header {
 }
 
 #hotel-description-div {
-    margin-left: 2%;
+    margin-left: 5%;
 }
 #hotel-description-div h2, h4 {
     font-family: cursive;
+}
+
+.checked {
+    color: orange;
+}
+.half-checked {
+    color: orange;
 }
 
 /* footer styling */

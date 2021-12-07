@@ -99,6 +99,12 @@ header {
     margin-top: 2%;
 }
 
+.checked {
+    color: orange;
+}
+.half-checked {
+    color: orange;
+}
 /* map view styling */
 #map-view {
     position: absolute;
