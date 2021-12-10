@@ -132,3 +132,70 @@ footer {
 #contactInputEmail {
     width: 300px;
 }
+
+/* Media query for smaller size display */
+@media only screen and (max-width:576px) {
+    #hotel-info {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 400px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    #customer-div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        align-items: flex-start;
+    }
+
+    #customer-info {
+        margin-left: 2%;
+    }
+
+    #tariff {
+        margin-left: 2%;
+    }
+
+    #payment-link-div {
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #copyright-para {
+        font-size: 10px;
+    }
+
+    .social-media-image {
+        height: 15px;
+        width: 18px;
+    }
+
+}
+
+/* Media query for medium size display */
+@media only screen and (min-width:576px) and (max-width:768px) {
+    #hotel-info {
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #customer-info {
+        margin-left: 10px;
+    }
+
+    #payment-link-div {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width:370px) {
+    #contactInputEmail {
+        width: 250px;
+    }
+}

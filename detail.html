@@ -3,9 +3,11 @@
     <head>
         <title>Detail</title>
 
+        <!-- Meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- Bootstrap Styling -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -13,12 +15,14 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+        <!-- CSS and Fonts Styling -->
         <link href="styles\detail.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="main">
 
+            <!-- Header Section -->
             <header>
                 <div id="logo-div">
                     <a href="index.html">
@@ -33,6 +37,7 @@
                 </div>
             </header>
 
+            <!-- Bootstrap Modal Section for Login -->
             <div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -78,16 +83,17 @@
             <div id="content">
                 <div id="hotel-div">
                     <div id="hotel-image-div">
+                        <!-- Bootstrap Carousel Design -->
                         <div id="carouselHotel" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                  <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" height="350px" width="500px" alt="image-1">
+                                  <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" height="350px" width="500px" alt="image-1" class="carousel-img">
                                 </div>
                                 <div class="carousel-item">
-                                  <img src="https://media-cdn.tripadvisor.com/media/photo-o/01/fa/51/70/r-the-spa.jpg" height="350px" width="500px" alt="image-2">
+                                  <img src="https://media-cdn.tripadvisor.com/media/photo-o/01/fa/51/70/r-the-spa.jpg" height="350px" width="500px" alt="image-2" class="carousel-img">
                                 </div>
                                 <div class="carousel-item">
-                                  <img src="https://media-cdn.tripadvisor.com/media/photo-w/0e/b2/64/3f/radisson-blu-plaza-delhi.jpg" height="350px" width="500px" alt="image-3">
+                                  <img src="https://media-cdn.tripadvisor.com/media/photo-w/0e/b2/64/3f/radisson-blu-plaza-delhi.jpg" height="350px" width="500px" alt="image-3" class="carousel-img">
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselHotel" role="button" data-slide="prev">
@@ -152,7 +158,6 @@
                             
                             <div class="form-div submit">
                                 <div class="input-div">
-                                    <!-- <button type="button" class="btn btn-outline-success" id="book-now" onclick="window.location.href='payment.html#'">Book Now</button> -->
                                     <input type="submit" class="btn btn-outline-success" id="book-now" value="Book Now">
                                 </div>
                             </div>
@@ -185,17 +190,21 @@
                 </div>
             </div>
 
+            <!-- Footer Section -->
             <footer>
+                <!-- Contacts Section -->
                 <div id="contact-div">
                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#contactModal" id="contact-button">
                         Contact Us
                     </button>
                 </div>
 
+                <!-- Copyright section -->
                 <div id="copyright-div">
                     <p id="copyright-para">&#9400; 2021 ROOM SEARCH PVT. LTD.</p>
                 </div>
 
+                <!-- Social Medial links Section -->
                 <div id="social-div">
                     <a href="https://www.facebook.com" target="_blank" class="social-link">
                         <img src="assests/images/facebook.png" alt="facebook" class="social-media-image">
@@ -209,6 +218,7 @@
                 </div>
             </footer>
 
+            <!-- Boostrap Modal for Contact -->
             <div class="modal" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">

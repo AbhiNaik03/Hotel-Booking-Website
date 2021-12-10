@@ -64,10 +64,6 @@ header {
     margin-right: 35%;
 }
 
-/* #pills-tabContent {
-    display: flex;
-} */
-
 /* list view styling */
 #list-view {
     display: flex;
@@ -108,8 +104,8 @@ header {
 /* map view styling */
 #map-view {
     position: absolute;
-    top: 120px;
-    left: 200px;
+    top: 100px;
+    left: 15%;
 }
 
 
@@ -154,4 +150,78 @@ footer {
 }
 #contactInputEmail {
     width: 300px;
+}
+
+/* Media query for smaller size display */
+@media only screen and (max-width:576px) {
+
+    #view-div {
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+
+    .hotel-div {
+        width: auto;
+    }
+
+    #map-view {
+        top: 100px;
+        left: 40px;
+    }
+
+    #map-img {
+        height: 350px;
+        width: 300px;
+    }
+
+    .hotel-info-div {
+        flex-direction: column;
+    }
+
+    #copyright-para {
+        font-size: 10px;
+    }
+
+    .social-media-image {
+        height: 15px;
+        width: 18px;
+    }
+}
+
+/* Media query for medium size display */
+@media only screen and (min-width:576px) and (max-width:768px) {
+    .hotel-div {
+        width: 500px;
+    }
+
+    #view-div {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    #map-view {
+        top: 100px;
+        left: 100px;
+    }
+    
+    #map-img {
+        height: 400px;
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width:370px) {
+    .hotel-images {
+        height: 150px;
+        width: 200px;
+    }
+
+    #map-img {
+        height: 300px;
+        width: 250px;
+    }
+
+    #contactInputEmail {
+        width: 250px;
+    }
 }

@@ -80,10 +80,13 @@ header {
 /* city cards styling */
 #city-card-div {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
     margin-top: 5%;
     margin-bottom: 5%;
 }
+
 #delhi-city-link {
     text-decoration: none;
 }
@@ -162,5 +165,51 @@ footer {
     display: flex;
 }
 #contactInputEmail {
-    width: 300px;
+    width: 250px;
+}
+
+/* Media query for smaller size display */
+@media only screen and (max-width:576px) {
+    #city-card-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #search-text {
+        width: 200px;
+    }
+
+    #copyright-para {
+        font-size: 10px;
+    }
+
+    .social-media-image {
+        height: 15px;
+        width: 18px;
+    }
+
+    .city-card {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Media query for medium size display */
+@media only screen and (min-width:576px) and (max-width:768px) {
+
+    #city-card-div {
+        display: block;
+        text-align: center;
+    }
+
+    .city-card {
+        display: inline-block;
+        margin: 10%;
+    }
+
+    .img-text-div {
+        left: 55px;
+        top: 60px;
+    }
+
 }
