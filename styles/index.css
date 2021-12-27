@@ -78,7 +78,7 @@ header {
 }
 
 /* city cards styling */
-#city-card-div {
+.city-card-div {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
