@@ -16,6 +16,7 @@
 
         <!-- CSS and Fonts Styling -->
         <link href="styles\index.css" rel="stylesheet">
+        <link href="styles\common.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
         
     </head>
@@ -23,61 +24,7 @@
         <div id="main">
 
             <!-- Header Section -->
-            <header>
-                <div id="logo-div">
-                    <img src="assests\images\logo.png" alt="logo" id="logo-img">
-                </div>
-                
-                <div id="login-div">
-                    <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#loginModal" id="login-button">
-                        LOGIN
-                    </button>
-                </div>
-            </header>
-
-            <!-- Bootstrap Modal Section for Login -->
-            <div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="loginModalLabel">Please Login</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                            <form>
-                                <div class="form-group row">
-                                    <div class="col">
-                                        <label for="loginInputUsername">Username: </label>
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" class="form-control" id="loginInputEmail" aria-describedby="userHelp" placeholder="Enter Username">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <div class="col">
-                                        <label for="loginInputPassword">Password</label>
-                                    </div>
-                                    <div class="col">
-                                        <input type="password" class="form-control" id="loginInputPassword" aria-describedby="passwordHelp" placeholder="Password">
-                                    </div>
-                                </div>
-                                
-                            </form>
-                    </div>
-                    <div class="modal-footer">
-                        <div class="row">
-                            <div class="col text-left">
-                                <button type="login" class="btn btn-primary">Login</button>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>  
-                
+            <div id="header-main"></div>
 
             <div id="content">
 
@@ -125,7 +72,7 @@
                     
                 </div>
 
-                <div class="city-card-div">
+                <div class="city-card-div" id="hidden-city-card">
                     <div class="city-card pair-1">
                         <div class="img-div">
                                 <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg" alt="chennai" class="city-image">
@@ -162,75 +109,16 @@
 
                 <!-- View link -->
                 <div id="view-div">
-                    <button type="button" class="btn btn-secondary btn-sm" onclick="window.location.href='index.html#'">View more >></button>
+                    <button type="button" class="btn btn-secondary btn-sm" id="view-button">View More</button>
                 </div>
             </div>
 
             <!-- Footer Section -->
-            <footer>
-                <!-- Contacts Section -->
-                <div id="contact-div">
-                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#contactModal" id="contact-button">
-                        Contact Us
-                    </button>
-                </div>
-
-                <!-- Copyright section -->
-                <div id="copyright-div">
-                    <p id="copyright-para">&#9400; 2021 ROOM SEARCH PVT. LTD.</p>
-                </div>
-
-                <!-- Social Medial links Section -->
-                <div id="social-div">
-                    <a href="https://www.facebook.com" target="_blank" class="social-link">
-                        <img src="assests/images/facebook.png" alt="facebook" class="social-media-image">
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank" class="social-link">
-                        <img src="assests/images/instagram.png" alt="instagram" class="social-media-image">
-                    </a>
-                    <a href="https://twitter.com" target="_blank" class="social-link">
-                        <img src="assests/images/twitter.png" alt="twitter" class="social-media-image">
-                    </a>
-                </div>
-            </footer>
-
-            <!-- Boostrap Modal for Contact -->
-            <div class="modal" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="contactModalLabel">Get in touch</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                            <form>
-                                <p>Thank you for reaching out!!!</p>
-                                <p>Please enter your email and we will get back to you.</p>
-                                <div class="form-group" id="contact-form">
-                                    <div class="row">
-                                        <div class="col">
-                                            <label for="contactInputEmail">Email: </label>
-                                        </div>
-                                        <div class="col">
-                                            <input type="text" class="form-control" id="contactInputEmail" aria-describedby="emailHelp" placeholder="Enter Username" required>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                    </div>
-                    <div class="modal-footer">
-                        <div class="row">
-                            <div class="col text-left">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>  
+            <div id="footer-main"></div>
 
         </div>
+
+        <script src="scripts\index.js"></script>
+        <script src="scripts\common.js"></script>
     </body>
 </html>

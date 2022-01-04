@@ -1,49 +1,5 @@
-/* body styling */
-body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    background-color: #e0e0e0;
-    font-family: 'Ubuntu', sans-serif;
-}
-#main {
-    height: 100%;
-    width: 100%;
-}
-
-/* header styling */
-header {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    background-color: rosybrown;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1;
-}
-
-/* logo styling */
-#logo-div {
-    margin-left: 1%;
-}
-#logo-img {
-    height: 60px;
-    width: 60px;
-}
-
-/* login styling */
-#login-div {
-    margin-top: 1.5%;
-    margin-right: 2%;
-}
-#loginModal .modal-body {
-    display: flex;
-    justify-content: center;
-}
-#loginModal .modal-footer {
-    display: flex;
-    justify-content: center;
+#logo-img-anchor {
+    pointer-events: none;
 }
 
 /* content styling */
@@ -123,49 +79,6 @@ header {
 #view-link {
     text-decoration: none;
     color: black;
-}
-
-/* footer styling */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    background-color: rosybrown;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    top: auto;
-    z-index: 1;
-}
-
-/* contact styling */
-#contact-div {
-    margin: 1%;
-    margin-left: 2%;
-}
-
-/* copyright styling */
-#copyright-para {
-    font-size: small;
-}
-
-/* social links styling */
-#social-div {
-    margin-right: 2%;
-}
-.social-link {
-    text-decoration: none;
-}
-.social-media-image {
-    height: 20px;
-    width: 22px;
-}
-#contact-form {
-    display: flex;
-}
-#contactInputEmail {
-    width: 250px;
 }
 
 /* Media query for smaller size display */
