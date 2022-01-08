@@ -22,7 +22,7 @@
     margin-top: 50px;
     flex-wrap: wrap;
 }
-#radison-hotel-link {
+.hotel-link {
     text-decoration: none;
     color: black;
 }

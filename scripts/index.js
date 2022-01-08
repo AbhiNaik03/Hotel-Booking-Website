@@ -14,3 +14,12 @@ viewButton.onclick = function() {
         viewButton.innerText = "View More"
     }
 }
+
+let cityLinkBtn = document.getElementsByClassName("city-link");
+for(let eachBtn of cityLinkBtn) {
+    eachBtn.addEventListener("click", function() {
+        let cityName = eachBtn.getAttribute("id");
+        sessionStorage.setItem("cityName", cityName);
+        eachBtn.setAttribute("href", `list.html?city=${cityName}`)
+    })
+}

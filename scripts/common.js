@@ -143,19 +143,27 @@ else {
     formButton.innerText = sessionStorage.getItem("buttonName");
 }
 
+localStorage.setItem("username", "admin");
+localStorage.setItem("password", "admin");
+
 formButton.onclick = function() {
     if (formButton.innerText == "LOGIN") {
+        formButton.setAttribute("data-target", "#loginModal")
         form.addEventListener("submit", function() {
-            location.reload();
-            sessionStorage.setItem("buttonName", "LOGOUT");
-            window.alert("Successfully logedin")
-            localStorage.setItem("username", username.value);
-            localStorage.setItem("password", password.value);
+            if (username.value == localStorage.getItem("username") && password.value == localStorage.getItem("password")){
+                location.reload();
+                sessionStorage.setItem("buttonName", "LOGOUT");
+                window.alert("Successfully loged in!");
+            }
+            else {
+                window.alert("Login Unsuccessful! Please enter correct credentials");
+            }
         })
     }
     else if (formButton.innerText == "LOGOUT") {
+        formButton.setAttribute("data-target", "")
         location.reload();
         sessionStorage.setItem("buttonName", "LOGIN");
-        localStorage.clear();
+        window.alert("Logged out");
     }
 }
