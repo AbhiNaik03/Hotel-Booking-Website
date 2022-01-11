@@ -1,3 +1,4 @@
+// Header Template
 let headerTemplate = `
 <header>
     <div id="logo-div">
@@ -59,7 +60,7 @@ let headerTemplate = `
 
 document.getElementById("header-main").innerHTML = headerTemplate;
 
-
+// Footer Template
 let footerTemplate = `
 <footer>
         <!-- Contacts Section -->

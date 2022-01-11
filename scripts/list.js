@@ -1,6 +1,9 @@
-function findCity(callback) {
-    console.log(sessionStorage.getItem("cityName"));
+var mainDiv = document.getElementById("main");
+var loaderDiv = document.getElementById("loader");
+mainDiv.style.display = "none";
 
+// Function for finding city details
+function findCity() {
     const data = null;
 
     const xhr = new XMLHttpRequest();
@@ -10,14 +13,13 @@ function findCity(callback) {
             let responseObj = JSON.parse(this.responseText);
             let cityLocationId = responseObj.data.Typeahead_autocomplete.results["0"].detailsV2.locationId;
             sessionStorage.setItem("cityLocationId", cityLocationId);
-            // console.log(locationId);
             getHotels();
         }
     });
 
     xhr.open("GET", `https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query=${sessionStorage.getItem("cityName")}&lang=en_US&units=km`);
     xhr.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
-    xhr.setRequestHeader("x-rapidapi-key", "50db210f90mshbb3a5d69dea44f5p1558c7jsndbd8c6033fb4");
+    xhr.setRequestHeader("x-rapidapi-key", "8ca7cfcc67mshcb3511c85796d63p121d36jsne067af62957a");
 
     xhr.send(data);
 
@@ -25,8 +27,8 @@ function findCity(callback) {
 
 findCity();
 
+// Function for finding hotels from city
 function getHotels() {
-    // console.log(sessionStorage.getItem("locationId"));
     const data = null;
 
     const xhr = new XMLHttpRequest();
@@ -34,7 +36,6 @@ function getHotels() {
     xhr.onreadystatechange = function () {
         if (this.readyState === this.DONE) {
             let responseObj = JSON.parse(this.responseText);
-            // console.log(responseObj);
             let container = document.getElementById("list-view");
             for(let eachObj of responseObj.data) {
                 if(eachObj.address!=undefined && eachObj.name!=undefined && eachObj.rating!=undefined) {
@@ -57,16 +58,13 @@ function getHotels() {
                     `
                     newDiv.innerHTML = newTemplate;
                     container.appendChild(newDiv);
-
-                    // console.log(eachObj.address);
-                    // console.log(eachObj.name);
-                    // console.log(eachObj.rating);
-                    // console.log(eachObj.photo.images.large.url);
-                    // console.log(eachObj.location_id);
                 }
             }
+            mainDiv.style.display = "block";
+            loaderDiv.style.display = "none";
+
+
             let hotelLinkBtn = document.getElementsByClassName("hotel-link");
-            console.log(hotelLinkBtn);
             for (let eachBtn of hotelLinkBtn) {
                 eachBtn.style.textDecoration = "none";
                 eachBtn.style.color = "black";
@@ -81,8 +79,36 @@ function getHotels() {
 
     xhr.open("GET", `https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id=${sessionStorage.getItem("cityLocationId")}&lang=en_US&currency=USD`);
     xhr.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
-    xhr.setRequestHeader("x-rapidapi-key", "50db210f90mshbb3a5d69dea44f5p1558c7jsndbd8c6033fb4");
+    xhr.setRequestHeader("x-rapidapi-key", "8ca7cfcc67mshcb3511c85796d63p121d36jsne067af62957a");
 
     xhr.send(data);
 }
 
+// Function for setting map details
+function initMap() {
+    const myLatLng = JSON.parse(sessionStorage.getItem("geoCode"));
+    const markerHotelDetails = JSON.parse(sessionStorage.getItem("hotelDetailsList"));
+    const map = new google.maps.Map(document.getElementById("map-view"), {
+      zoom: 12,
+      center: myLatLng,
+    });
+  
+    const infoWindow = new google.maps.InfoWindow();
+  
+    markerHotelDetails.forEach(([positionObj, title, locationId]) => {
+        const marker = new google.maps.Marker({
+            position: positionObj,
+            map,
+            title: title,
+            optimized: false, 
+        });
+  
+        marker.addListener("click", () => {
+            sessionStorage.setItem("hotelLocationId", locationId);
+            infoWindow.close();
+            infoWindow.setContent(`<p><h6>${title}</h6><p>
+            <a href="detail.html?id=${locationId}" class="book-now-link">Book Now</a>`);
+            infoWindow.open(marker.getMap(), marker);
+        });
+    })
+}

@@ -89,3 +89,19 @@ footer {
 #contactInputEmail {
     width: 250px;
 }
+
+/* Media query for smaller size display */
+@media only screen and (max-width:576px) {
+    #copyright-para {
+        font-size: 10px;
+    }
+
+    .social-media-image {
+        height: 15px;
+        width: 18px;
+    }
+
+    #contact-div {
+        margin-left: 1%;
+    }
+}

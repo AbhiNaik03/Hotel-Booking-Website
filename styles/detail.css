@@ -188,6 +188,10 @@
         left: 0px;
     }
 
+    .carousel-control-next-icon:after, .carousel-control-prev-icon:after {
+        color: transparent;
+    }
+
     .form-div {
         margin: 5%;
     }

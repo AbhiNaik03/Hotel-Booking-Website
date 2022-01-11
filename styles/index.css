@@ -14,6 +14,7 @@
 /* search bar styling */
 #search-bar-div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
@@ -22,7 +23,7 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-#search-text {
+.search-text {
     border: 1px solid transparent;
     border-radius: 12px;
     background-color: #f1f1f1;
@@ -33,11 +34,25 @@
     outline: none;
 }
 
+#suggestion-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.clickable-text {
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+}
+
 /* city cards styling */
 .city-card-div {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     justify-content: space-evenly;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -83,43 +98,31 @@
 
 /* Media query for smaller size display */
 @media only screen and (max-width:576px) {
-    #city-card-div {
+    .city-card-div {
         display: flex;
         flex-direction: column;
     }
 
-    #search-text {
+    .city-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .search-text {
         width: 200px;
     }
 
-    #copyright-para {
-        font-size: 10px;
-    }
-
-    .social-media-image {
-        height: 15px;
-        width: 18px;
-    }
-
-    .city-card {
-        margin-top: 10px;
-        margin-bottom: 10px;
+    .clickable-text {
+        width: 200px;
     }
 }
 
 /* Media query for medium size display */
 @media only screen and (min-width:576px) and (max-width:768px) {
-
-    #city-card-div {
-        display: block;
-        text-align: center;
-    }
-
-    .city-card {
-        display: inline-block;
-        margin: 10%;
-    }
-
     .img-text-div {
         left: 55px;
         top: 60px;

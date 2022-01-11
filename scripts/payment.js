@@ -1,7 +1,11 @@
+var mainDiv = document.getElementById("main");
+var loaderDiv = document.getElementById("loader");
+mainDiv.style.display = "none";
+
+// Function for showing Hotel Info
 function showHotelInfo() {
     let hotelDiv = document.getElementById("hotel-info");
     let hotelInfoObj = JSON.parse(sessionStorage.getItem("hotelInfo"));
-    console.log(hotelInfoObj);
 
     let newTemplate = `
         <div id="img-div">
@@ -20,10 +24,10 @@ function showHotelInfo() {
 
 showHotelInfo();
 
+// Function for showing booking info
 function showBookingInfo() {
     let customerDiv = document.getElementById("customer-div");
     let bookingInfoObj = JSON.parse(sessionStorage.getItem("bookingInfo"));
-    console.log(bookingInfoObj);
 
     let newTemplate = `
         <div id="customer-info">
@@ -46,9 +50,14 @@ function showBookingInfo() {
     `
 
     customerDiv.innerHTML = newTemplate;
+
+    mainDiv.style.display = "block";
+    loaderDiv.style.display = "none";
 }
 showBookingInfo();
 
+
+// Logic for Pay Button
 const payButton = document.getElementById("pay-button");
 
 function check() {

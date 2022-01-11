@@ -17,10 +17,13 @@
         <!-- CSS and Fonts Styling -->
         <link href="styles\index.css" rel="stylesheet">
         <link href="styles\common.css" rel="stylesheet">
+        <link href="styles\loader.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
         
     </head>
     <body>
+        <div id="loader"></div>
+
         <div id="main">
 
             <!-- Header Section -->
@@ -30,14 +33,16 @@
 
                 <!-- Search Bar Section -->
                 <div id="search-bar-div">
-                    <input type="text" autocomplete="off" placeholder="City" id="search-text" size="40">
+                    <input type="text" autocomplete="off" placeholder="City" class="search-text" id="search-bar" size="40">
+                    <div id="suggestion-div"></div>
+                    
                 </div>
 
                 <!-- City Cards Section -->
                 <div class="city-card-div">
                     <div class="city-card pair-1">
                         <div class="img-div">
-                            <a href="list.html" class="city-link" id="delhi">
+                            <a class="city-link" id="delhi">
                                 <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="delhi" class="city-image">
                             </a>
                         </div>
@@ -47,7 +52,7 @@
                     </div>
                     <div class="city-card pair-1">
                         <div class="img-div">
-                            <a href="list.html" class="city-link" id="goa">
+                            <a class="city-link" id="goa">
                                 <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="goa" class="city-image">
                             </a>
                         </div>
@@ -57,7 +62,7 @@
                     </div>
                     <div class="city-card pair-2">
                         <div class="img-div">
-                            <a href="list.html" class="city-link" id="hyderabad">
+                            <a class="city-link" id="hyderabad">
                                 <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="hyderbad" class="city-image">
                             </a>
                             </div>
@@ -67,7 +72,7 @@
                     </div>
                     <div class="city-card pair-2">
                         <div class="img-div">
-                            <a href="list.html" class="city-link" id="kolkata">
+                            <a class="city-link" id="kolkata">
                                 <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt="kolkata" class="city-image">
                             </a>
                         </div>
@@ -81,7 +86,7 @@
                 <div class="city-card-div" id="hidden-city-card">
                     <div class="city-card pair-1">
                         <div class="img-div">
-                            <a href="list.html" class="city-link" id="chennai">
+                            <a class="city-link" id="chennai">
                                 <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg" alt="chennai" class="city-image">
                             </a>
                             </div>
@@ -91,7 +96,7 @@
                     </div>
                     <div class="city-card pair-1">
                         <div class="img-div">
-                            <a href="list.html" class="city-link" id="agra">
+                            <a class="city-link" id="agra">
                                 <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/fc/agra.jpg" alt="agra" class="city-image">
                             </a>
                             </div>
@@ -101,7 +106,7 @@
                     </div>
                     <div class="city-card pair-2">
                         <div class="img-div">
-                            <a href="list.html" class="city-link" id="jaipur">
+                            <a class="city-link" id="jaipur">
                                 <img src="https://media-cdn.tripadvisor.com/media/photo-s/10/a3/3b/8a/screenshot-2017-09-12.jpg" alt="jaipur" class="city-image">
                             </a>
                             </div>
@@ -111,7 +116,7 @@
                     </div>
                     <div class="city-card pair-2">
                         <div class="img-div">
-                            <a href="list.html" class="city-link" id="bengaluru">
+                            <a class="city-link" id="bengaluru">
                                 <img src="https://media-cdn.tripadvisor.com/media/photo-s/0c/d2/2f/7a/palace-from-the-outside.jpg" alt="bengaluru" class="city-image">
                             </a>
                             </div>

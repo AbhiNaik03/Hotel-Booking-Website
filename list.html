@@ -18,9 +18,12 @@
         <!-- CSS and Fonts Styling -->
         <link href="styles\list.css" rel="stylesheet">
         <link href="styles\common.css" rel="stylesheet">
+        <link href="styles\loader.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div id="loader"></div>
+
         <div id="main">
 
             <!-- Header Section -->
@@ -42,69 +45,9 @@
 
                 <!-- Bootstrap design for both views -->
                 <div class="tab-content" id="pills-tabContent">
-                    <div id="list-view" class="tab-pane fade show active">
-                        <!-- <div class="hotel-div">
-                            <a href="detail.html" id="radison-hotel-link">
-                                <div class="hotel-info-div">
-                                    <div class="hotel-img">
-                                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="radison_blue" class="hotel-images">
-                                    </div>
-                                    
-                                    <div class="hotel-info">
-                                        <h3>Radison Blue</h3>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star-half-o half-checked"></span>
-                                        <p>New Delhi</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-    
-                        <div class="hotel-div">
-                            <div class="hotel-info-div">
-                                <div class="hotel-img">
-                                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt="lalit" class="hotel-images">
-                                </div>
-                                
-                                <div class="hotel-info">
-                                    <h3>The Lalit</h3>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star-half-o half-checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <p>New Delhi</p>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="hotel-div">
-                            <div class="hotel-info-div">
-                                <div class="hotel-img">
-                                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt="taj" class="hotel-images">
-                                </div>
-                                
-                                <div class="hotel-info">
-                                    <h3>Taj Palace</h3>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <p>New Delhi</p>
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
+                    <div id="list-view" class="tab-pane fade show active"></div>
 
-                    <div id="map-view" class="tab-pane fade">
-                        <div>
-                            <!-- <img src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt="map" id="map-img"> -->
-                        </div>
-                    </div>
+                    <div id="map-view" class="tab-pane fade"></div>
                 </div>
 
             </div>
@@ -114,5 +57,6 @@
         
         <script src="scripts\list.js"></script>
         <script src="scripts\common.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiE8sg7SvFA1CSwqNihrVc_RllzJ64200&callback=initMap"></script>
     </body>
 </html>

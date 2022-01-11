@@ -1,3 +1,8 @@
+var mainDiv = document.getElementById("main");
+var loaderDiv = document.getElementById("loader");
+mainDiv.style.display = "none";
+
+//Logic for selecting date
 const dateOne = document.getElementById("from-date");
 const dateTwo = document.getElementById("to-date");
 const bokkingName = document.getElementById("book-name");
@@ -24,6 +29,7 @@ dateOne.addEventListener("change", function() {
 const numOfAdult = document.getElementById("number-of-adult");
 const totalText = document.getElementById("total-txt");
 
+// Updating Booking Details
 dateTwo.addEventListener("change", function(){
     const first = new Date(dateOne.value);
     const second = new Date(dateTwo.value);
@@ -42,9 +48,9 @@ dateTwo.addEventListener("change", function(){
     }
 
     sessionStorage.setItem("bookingInfo", JSON.stringify(bokkingInfo));
-    console.log(JSON.parse(sessionStorage.getItem("bookingInfo")));
 })
 
+// Updating Booking Details
 numOfAdult.addEventListener("change", function(){
     if (dateTwo.value!="") {
         const first = new Date(dateOne.value);
@@ -64,10 +70,10 @@ numOfAdult.addEventListener("change", function(){
         }
     
         sessionStorage.setItem("bookingInfo", JSON.stringify(bokkingInfo));
-        console.log(JSON.parse(sessionStorage.getItem("bookingInfo")));
     }
 })
 
+// Updating Booking Details
 bokkingName.addEventListener("change", function() {
     if (dateTwo.value!="") {
         const first = new Date(dateOne.value);
@@ -87,10 +93,10 @@ bokkingName.addEventListener("change", function() {
         }
     
         sessionStorage.setItem("bookingInfo", JSON.stringify(bokkingInfo));
-        console.log(JSON.parse(sessionStorage.getItem("bookingInfo")));
     }
 })
 
+// Function for Getting Photos for Carousel
 function getPhotos() {
     const data = null;
 
@@ -101,13 +107,10 @@ function getPhotos() {
         if (this.readyState === this.DONE) {
             let responseObj = JSON.parse(this.responseText);
             let carouselActive = false;
-            // console.log(responseObj);
             for (let eachObj of responseObj.data){
                 if (carouselActive==false) {
                     let imgUrl = eachObj.images.large.url;
                     let imgName = eachObj.locations["0"].name;
-                    // console.log(imgUrl);
-                    console.log(imgName);
                     let newCarouselDiv = document.createElement("div");
                     newCarouselDiv.setAttribute("class", "carousel-item active");
                     let newTemplate = `
@@ -120,8 +123,6 @@ function getPhotos() {
                 else {
                     let imgUrl = eachObj.images.large.url;
                     let imgName = eachObj.locations["0"].name;
-                    // console.log(imgUrl);
-                    // console.log(imgName);
                     let newDev = document.createElement("div");
                     newDev.setAttribute("class", "carousel-item");
                     let newTemplate = `
@@ -134,16 +135,16 @@ function getPhotos() {
         }
     });
 
-    console.log(sessionStorage.getItem("hotelLocationId"));
     xhr.open("GET", `https://travel-advisor.p.rapidapi.com/photos/list?location_id=${sessionStorage.getItem("hotelLocationId")}&currency=USD&limit=50&lang=en_US`);
     xhr.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
-    xhr.setRequestHeader("x-rapidapi-key", "50db210f90mshbb3a5d69dea44f5p1558c7jsndbd8c6033fb4");
+    xhr.setRequestHeader("x-rapidapi-key", "8ca7cfcc67mshcb3511c85796d63p121d36jsne067af62957a");
 
     xhr.send(data);
 }
 
 getPhotos();
 
+// Function for Geting Hotel Details
 function getHotelDetails() {
     const data = null;
 
@@ -153,7 +154,6 @@ function getHotelDetails() {
         let descriptionDiv = document.getElementById("hotel-description-div");
         if (this.readyState === this.DONE) {
             let responseObj = JSON.parse(this.responseText);
-            console.log(responseObj.data["0"]);
 
             let hotelInfo = {
                 "name": responseObj.data["0"].name,
@@ -163,7 +163,6 @@ function getHotelDetails() {
             }
 
             sessionStorage.setItem("hotelInfo", JSON.stringify(hotelInfo));
-            console.log(JSON.parse(sessionStorage.getItem("hotelInfo")));
 
             let newTemplate = `
                 <div id="hotel-name">
@@ -206,7 +205,6 @@ function getHotelDetails() {
 
             let starDiv = document.getElementById("star-rating");
             let rating = parseInt(responseObj.data["0"].rating);
-            // console.log(rating);
             for(let i=0; i<rating; i++) {
                 let spanElement = document.createElement("span");
                 spanElement.setAttribute("class", "fa fa-star checked");
@@ -214,24 +212,20 @@ function getHotelDetails() {
             }
 
             let halfRating = parseFloat(responseObj.data["0"].rating) - Math.floor(parseFloat(responseObj.data["0"].rating));
-            // console.log(halfRating);
             if(halfRating==0.5) {
                 let spanElement = document.createElement("span");
                 spanElement.setAttribute("class", "fa fa-star-half-o half-checked");
                 starDiv.appendChild(spanElement);
             }
 
-            // console.log(responseObj.data["0"].description);
-            // console.log(responseObj.data["0"].name);
-            // console.log(responseObj.data["0"].rating);
-            // console.log(typeof parseInt(responseObj.data["0"].rating));
-            // console.log(responseObj.data["0"].amenities);
+            mainDiv.style.display = "block";
+            loaderDiv.style.display = "none";
         }
     });
 
     xhr.open("GET", `https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id=${sessionStorage.getItem("hotelLocationId")}&lang=en_US&currency=USD`);
     xhr.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
-    xhr.setRequestHeader("x-rapidapi-key", "50db210f90mshbb3a5d69dea44f5p1558c7jsndbd8c6033fb4");
+    xhr.setRequestHeader("x-rapidapi-key", "8ca7cfcc67mshcb3511c85796d63p121d36jsne067af62957a");
 
     xhr.send(data);
 }
